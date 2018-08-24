@@ -1,0 +1,135 @@
+body {
+	font-family: 'Raleway', sans-serif;
+	color: #ab3939;
+	background: url('../images/swan.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+
+#heading {
+	padding: 42px;
+	background: gray;
+	-webkit-animation: myAnimation 5s infinite;
+	animation: myAnimation 5s infinite;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+h1 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+@-webkit-keyframes 'myAnimation' {
+	50% {
+		background-color: lightgray;
+	}
+}
+
+@keyframes 'myAnimation' {
+	50% {
+		background-color: lightgray;
+	}
+}
+
+#page_title {
+	font-family: sans-serif;
+}
+
+.content {
+	font-size: 0.8em;
+	color: #767676;
+	background-color: lightgray;
+	padding: 20px;
+	border-left: 10px solid #ab3939;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#subheading {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: lightgray;
+	padding: 5px 5px 5px 42px;
+	margin-top: 10px;
+	width: 40%;
+
+}
+
+.highlight {
+	background-color: yellow;
+	font-weight: 600;
+	font-style: italic;
+	font-variant: small-caps;
+	text-transform: uppercase;
+	text-decoration: line-through underline overline;
+	text-shadow: 5px 0 1px gray;
+}
+
+.package {
+	transition: all 500ms ease-out 1s; 
+	-webkit-transition: all 500ms ease-out 1s;
+	-moz-transition: all 500ms ease-out 1s;
+	-o-transition: all 500ms ease-out 1s;
+	background-color: lightgray;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 20px;
+	margin: 50px;
+	font-size: 1.2em;
+	border-bottom: 10px solid green;
+	width: 200px;
+}
+
+.package:hover{
+	background-color: green;
+	color: white;
+	cursor: pointer;
+}
+
+#pricing_table {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+/* pseudo classes */
+
+a:link {
+	color: black;
+}
+
+a:visited {
+	color: green;
+}
+
+a:hover {
+	color: orange;
+}
+
+a:active {
+	color: blue;
+}
+
+.content-bullets {
+	padding-left: 40px;
+	font-size: 1.5em;
+	list-style: square;
+}
+
+#blocks {
+	position: absolute;
+}
+
+.block {
+	height: 140px;
+	width: 250px;
+	background-color: #ab3939;
+	margin: 20px;
+	float: left;
+}

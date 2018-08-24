@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My HTML Email</title>
+        <style>
+            *{
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .wrapper {
+               width: 500px;
+               height: 400px;
+               margin-right: auto;
+               margin-left: auto;
+            }
+
+            .content {
+               background-color: darkslategray;
+               height: 80%;
+            }
+
+            .message {
+                font-size: 1.8em;
+                color: white;
+                padding: 20px;
+            }
+
+            .sub {
+                color: lightgreen;
+                font-size: 1.2em;
+                padding-left: 20px;
+                padding-bottom: 130px;
+            }
+
+            .special {
+               font-size: 1.5em;
+               background-color:  seagreen;
+               width: 50%;
+               margin-left: 10px;
+               padding: 10px;
+               color: white;
+            }
+
+            .footer {
+                background-color: limegreen;
+                height: 80px;
+                color: white;
+                font-size: 1.2em;
+                line-height: 80px;
+            }
+
+            .footer-child {
+                margin: auto 0 auto 25px;
+                height: 100%;
+                align-content: center;
+                vertical-align: middle;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content">
+                <div class="message">
+                    Hi, here's my message
+                </div>
+                <div class="sub">
+                    And a sub heading
+                </div>
+                <div class="special">
+                    Check out our weekly specials!
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer-child">&reg; Some Company 2018</div>
+            </div>
+        </div>
+    </body>
+</html>

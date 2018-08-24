@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+<!--on vscode git-->
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+  <style>
+    .todoItem:hover {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="todos">
+    <h2>Pending Todos</h2>
+    <ul>
+      <li class="todoItem" onclick="completeItems()">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, animi.</li>
+      <li class="todoItem" onclick="completeItems()">Numquam dolor quo alias nam vel voluptates magni magnam quisquam.</li>
+      <li class="todoItem" onclick="completeItems()">Recusandae eaque quisquam facere ab reprehenderit cupiditate magni placeat quis?</li>
+      <li class="todoItem" onclick="completeItems()">Expedita asperiores nam saepe voluptatem, nostrum aliquid debitis quam recusandae.</li>
+      <li class="todoItem" onclick="completeItems()">Quaerat velit deserunt reprehenderit, vel placeat impedit accusamus non, deleniti!</li>
+    </ul>
+  </div>
+  <h2>Completed Todos</h2>
+  <ul class="completedTodoWrapper">
+    <div class="completed"></div>
+  </ul>
+</body>
+<script>
+    const items = document.querySelectorAll('.todoItem');
+    let i = 0;
+    function completeItems() {
+        const specificItem = items[i];
+        const completedItem = document.createElement('li');
+        completedItem.classList.add('completedItem');
+        let transitionItem = specificItem.innerHTML;
+        const newCompleteItems = document.createTextNode(transitionItem);
+        const insert = document.querySelector('.completed');
+        completedItem.appendChild(newCompleteItems);
+        insert.appendChild(completedItem);
+        specificItem.remove();
+        i++;
+    }
+</script>
+</html>

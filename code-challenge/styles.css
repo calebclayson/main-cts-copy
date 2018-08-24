@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    background-color: lightsteelblue;
+}
+
+.navbar-container {
+    display: flex;
+    background-color: #333;
+}
+
+.navbar-container a {
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar-container a:hover {
+    background-color: #111;
+}

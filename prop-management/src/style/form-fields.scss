@@ -1,0 +1,112 @@
+
+// Input
+
+.form-input,
+.form-textarea {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 10fr;
+    //grid-template-columns: 129px 500px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+
+    &__title {
+        grid-row: 1/-1;
+        grid-column: 1/2;
+    }
+
+    &__input {
+        grid-row: 1/-1;
+        grid-column: 2/3;
+    }
+}
+
+.form-input,
+.form-textarea {
+
+    &__title {
+        color: $color-red-BA;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.3rem;
+    }
+
+    &__input {
+        font-family: $font-encode;
+        height: 4rem;
+        width: 100%;
+        border: 1px solid $color-gray-E6;
+        border-radius: .5rem;
+        padding-left: 2rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+}
+
+.form-textarea {
+
+    &__title {
+        align-self: start;
+    }
+
+    &__input {
+        height: 35.5rem;
+        resize: none;
+        padding-top: 1rem;
+        width: 100%;
+    }
+}
+
+// Button
+
+.form-button,
+.form-button-small {
+    &__button {
+        transition: all .2s ease;
+        &:focus {
+            outline: none;
+        }
+        &:active {
+            transform: scale(0.95) translateY(1.05px);
+        }
+    }
+}
+
+.form-button {
+    
+    &__button {
+        height: 4rem;
+        width: 21.6rem;
+        border-radius: 2rem;
+        background-color: $color-red-BA;
+        color: white;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 2.8rem;
+        text-align: center;
+        border: 1px solid transparent;
+    }
+}
+
+.form-button-small {
+
+    &__button {
+        width: 13rem !important;
+        border-radius: 1.6rem;
+        border: 1px solid $color-gray-4D;
+        width: 7.4rem;
+        height: 2.4rem;
+
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        text-align: center;
+        background-color: white;
+    }
+
+    &__danger {
+        border: 1px solid $color-red-BA;
+        color: white;
+        background-color: $color-red-BA;
+    }
+}

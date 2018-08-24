@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Error Management in JavaScript</title>
+    </head>
+    <body>
+    </body>
+    <script type="text/javascript" src="">
+        class DevcampError extends Error {
+            constructor(msg = 'An error occured', ...params) {
+                super(...params);
+                this.msg = msg;
+            }
+        }
+    
+    
+        function siteComponent(func) {
+            return func();
+        }
+        
+        const widget = () => {
+            return '<div>Hi there</div>';
+        }
+        
+        try {
+            console.log(siteComponent('oops'));    
+        } catch(e) {
+            throw new DevcampError('DevcampError', e);
+        }
+        
+    </script>
+</html>

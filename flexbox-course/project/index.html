@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+        <meta charset='UTF-8'>
+        <title>Flexbox Nav Bar</title>
+        <script>
+            var trigger = true;
+            function dropDown() {
+                if(trigger) {
+                    document.getElementById("img-contain").style.background = "#004d1a";
+                    document.getElementById("linkTwoOne").style.display = "block";
+                    document.getElementById("linkTwoTwo").style.display = "block";
+                    document.getElementById("linkTwoThree").style.display = "block";
+                    trigger = false;
+                } else {
+                    document.getElementById("img-contain").style.background = "#00802b";
+                    document.getElementById("linkTwoOne").style.display = "none";
+                    document.getElementById("linkTwoTwo").style.display = "none";
+                    document.getElementById("linkTwoThree").style.display = "none";
+                    trigger = true;
+                }
+            }
+        </script>
+        <style type="text/css">
+            @media only screen and (max-width: 474px) {
+                #nav-img {
+                    display: inline-block;
+                }
+                .link {
+                    display: none;
+                }
+                .name {
+                    padding-right: 0.14em;
+                }
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Oxygen', sans-serif;
+            }
+            
+            .nav-bar {
+                background-color: #00802b;
+                color: white;
+                display: flex;
+            }
+            
+            .name {
+                padding: 10px;
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+            
+            .nav-bar .left-link, .nav-bar .right-link {
+                display: flex;
+                flex: 1;
+            }
+            
+            .nav-bar .right-link {
+               justify-content: flex-end;
+            }
+            
+            .link {
+                background-color: #004d1a;
+                padding: 10px;
+                cursor: pointer;
+            }
+            
+            .link:hover {
+                background-color: #e6e6e6;
+                color: #004d1a;
+            }
+            
+            .nav-img {
+                display: none;
+                height: 1.9em;
+                vertical-align: middle;
+                margin: 0.24em 5px auto 5px;
+            }
+            
+            .linkTwo {
+                display: none;
+                background-color: #004d1a;
+                cursor: pointer;
+                color: white;
+                padding: 10px;
+            }
+            
+            .linkTwo:hover {
+                background-color: #e6e6e6;
+                color: #004d1a;
+            }
+            
+            #img-contain{
+                background-color: #00802b;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body id="body" onResize="resize();">
+        <div class="nav-bar">
+            <div class="img-contain" id="img-contain" onclick="dropDown();">
+                <img src="../images/nav.png" class="nav-img" id="nav-img">
+            </div>
+            <div class="name" id="name">MyName</div>
+            <div class="left-link">
+                <div class="link">Link 1</div>
+                <div class="link">Link 2</div>
+            </div>
+            <div class="right-link">
+                <div class="link">Link 3</div>
+            </div>
+        </div>
+        <div class="linkTwoContain">
+                <div class="linkTwo" id="linkTwoOne">Link 1</div>
+                <div class="linkTwo" id="linkTwoTwo">Link 2</div>
+                <div class="linkTwo" id="linkTwoThree">Link 3</div>
+        </div>
+    </body>
+</html>

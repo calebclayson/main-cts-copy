@@ -1,0 +1,62 @@
+body {
+    font-family: sans-serif;
+}
+img {
+    width: 10%;
+    display: block;
+    margin: 200px auto 100px auto;
+}
+
+input {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 1.5em;
+    color: lightgray;
+    font-weight: 700;
+    padding: 30px 15px 20px 15px;
+}
+
+p {
+    text-align: right;
+    display: block;
+    font-size: .8em;
+    color: lightgray;
+}
+
+.content-wrapper {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 42px;
+}
+
+.result-box {
+    margin-left: 10px;
+}
+
+.heading {
+    color: #0079FF;
+    margin-top: 200px;
+    margin-bottom: 42px;
+    font-size: 1.15;
+}
+
+.topic {
+    color: #3d3d3d;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.language {
+    color: gray;
+    font-size: .8em;
+}
